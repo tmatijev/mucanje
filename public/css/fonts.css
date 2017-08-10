@@ -1,0 +1,43 @@
+@font-face {
+  font-family: 'ProximaNovaSoft-Bold';
+  font-style: normal;
+  font-weight: 700;
+  src: local('ProximaNovaSoft-Bold'),
+    url('fonts/ProximaNovaSoft-Bold.woff2') format('woff2'), 
+    url('fonts/ProximaNovaSoft-Bold.woff') format('woff'),
+    url('fonts/ProximaNovaSoft-Bold.ttf') format('truetype'),
+    url('fonts/ProximaNovaSoft-Bold.eot') format('embedded-opentype');
+}
+
+@font-face {
+  font-family: 'ProximaNovaSoft-Regular';
+  font-style: normal;
+  font-weight: 400;
+  src: local('ProximaNovaSoft-Regular'),
+    url('fonts/ProximaNovaSoft-Regular.woff2') format('woff2'), 
+    url('fonts/ProximaNovaSoft-Regular.woff') format('woff'),
+    url('fonts/ProximaNovaSoft-Regular.ttf') format('truetype'),
+    url('fonts/ProximaNovaSoft-Regular.eot') format('embedded-opentype');
+}
+
+@font-face {
+  font-family: 'ProximaNovaSoft-Medium';
+  font-style: normal;
+  font-weight: 500;
+  src: local('ProximaNovaSoft-Medium'),
+    url('fonts/ProximaNovaSoft-Medium.woff2') format('woff2'), 
+    url('fonts/ProximaNovaSoft-Medium.woff') format('woff'),
+    url('fonts/ProximaNovaSoft-Medium.ttf') format('truetype'),
+    url('fonts/ProximaNovaSoft-Medium.eot') format('embedded-opentype');
+}
+  
+@font-face {
+  font-family: 'ProximaNovaSoft-Semibold';
+  font-style: normal;
+  font-weight: 600;
+  src: local('ProximaNovaSoft-Semibold'),
+    url('fonts/ProximaNovaSoft-Semibold.woff2') format('woff2'), 
+    url('fonts/ProximaNovaSoft-Semibold.woff') format('woff'),
+    url('fonts/ProximaNovaSoft-Semibold.ttf') format('truetype'),
+    url('fonts/ProximaNovaSoft-Semibold.eot') format('embedded-opentype');
+}

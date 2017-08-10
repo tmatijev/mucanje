@@ -1,0 +1,74 @@
+.logo
+  width: px-to-rem(160px)
+
+.icon
+  &.is-blue
+    color: $color-blue
+
+  &.is-green
+    color: $color-green
+
+  &.is-yellow
+    color: $color-yellow
+
+  &.is-orange
+    color: $color-orange
+
+  &.is-pink
+    color: $color-pink
+
+  &.is-purple
+    color: $color-purple
+
+.icon_is-rounded
+  .icon_shape
+    +circle
+    width: px-to-rem(125px)
+    height: px-to-rem(125px)
+    display: flex
+    justify-content: center
+
+    &.is-blue
+      background-color: $color-blue-light
+
+    &.is-green
+      background-color: $color-green-light
+
+    &.is-yellow
+      background-color: $color-yellow-light
+
+    &.is-orange
+      background-color: $color-orange-light
+
+    &.is-purple
+      background-color: $color-purple-light
+
+    &.is-pink
+      background-color: $color-pink-light
+
+.icon_mucanje,
+.icon_kriznoRazdoblje,
+.icon_samopomoc
+  width: px-to-rem(55px)
+
+.icon_roditelji
+  width: px-to-rem(89px)
+
+.icon_price
+  width: px-to-rem(45px)
+
+.icon_razno
+  width: px-to-rem(38px)
+
+.icon_centered
+  display: flex
+  align-items: center
+  flex-direction: column
+
+.icon_text
+  +font-bold
+  padding-top: $spacing-normal
+  font-size: 1.3125rem
+  line-height: 1.4
+  display: block
+  text-align: center

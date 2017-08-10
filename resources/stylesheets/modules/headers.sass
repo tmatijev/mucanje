@@ -1,0 +1,22 @@
+#header
+  position: relative
+  &:before,
+  &:after
+    +background-opacity
+    content: ''
+    position: absolute
+    top: 0
+    width: 100%
+    height: $header-height
+
+  &:before
+    left: -100%
+
+  &:after
+    left: 100%
+
+#logo
+  +background-opacity
+  display: flex
+  align-items: center
+  height: $header-height

@@ -1,0 +1,226 @@
+html, body, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  vertical-align: baseline; }
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+html * {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%; }
+
+html {
+  font-family: "ProximaNovaSoft-Medium";
+  width: 100%;
+  max-height: 100%; }
+
+html, button, input, textarea, label {
+  font-size: 16px;
+  line-height: 1.6; }
+
+body {
+  background: #dbe7f2;
+  background: -webkit-gradient(linear, left top, right top, from(#dbe7f2), to(#f6e2ea));
+  background: linear-gradient(to right, #dbe7f2, #f6e2ea);
+  font-family: "ProximaNovaSoft-Medium";
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  color: #333;
+  font-size: 16px;
+  line-height: 1.6; }
+
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+a {
+  text-decoration: none;
+  color: inherit; }
+
+i {
+  text-decoration: underline; }
+
+b,
+strong {
+  font-family: "ProximaNovaSoft-Bold"; }
+
+.container {
+  width: 75rem;
+  margin: 0 auto; }
+
+.no-padding {
+  padding: 0 !important; }
+
+.no-margin {
+  margin: 0 !important; }
+
+#header {
+  position: relative; }
+  #header:before, #header:after {
+    background: rgba(255, 255, 255, 0.5);
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 6.25rem; }
+  #header:before {
+    left: -100%; }
+  #header:after {
+    left: 100%; }
+
+#logo {
+  background: rgba(255, 255, 255, 0.5);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 6.25rem; }
+
+.logo {
+  width: 10rem; }
+
+.icon.is-blue {
+  color: #77bce9; }
+.icon.is-green {
+  color: #60bfae; }
+.icon.is-yellow {
+  color: #e6bd8a; }
+.icon.is-orange {
+  color: #f29f8d; }
+.icon.is-pink {
+  color: #f25e86; }
+.icon.is-purple {
+  color: #cd9ec4; }
+
+.icon_is-rounded .icon_shape {
+  border-radius: 50%;
+  width: 7.8125rem;
+  height: 7.8125rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
+  .icon_is-rounded .icon_shape.is-blue {
+    background-color: #edf7fd; }
+  .icon_is-rounded .icon_shape.is-green {
+    background-color: #e7f6f3; }
+  .icon_is-rounded .icon_shape.is-yellow {
+    background-color: #fbf5ee; }
+  .icon_is-rounded .icon_shape.is-orange {
+    background-color: #fdf1ee; }
+  .icon_is-rounded .icon_shape.is-purple {
+    background-color: #f8f1f6; }
+  .icon_is-rounded .icon_shape.is-pink {
+    background-color: #fde7ed; }
+
+.icon_mucanje,
+.icon_kriznoRazdoblje,
+.icon_samopomoc {
+  width: 3.4375rem; }
+
+.icon_roditelji {
+  width: 5.5625rem; }
+
+.icon_price {
+  width: 2.8125rem; }
+
+.icon_razno {
+  width: 2.375rem; }
+
+.icon_centered {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column; }
+
+.icon_text {
+  font-family: "ProximaNovaSoft-Bold";
+  padding-top: 1rem;
+  font-size: 1.3125rem;
+  line-height: 1.4;
+  display: block;
+  text-align: center; }
+
+.jumbotron_white {
+  background-color: #fff;
+  padding: 3.75rem 0; }
+
+.jumbotron__title {
+  font-size: 2.375rem;
+  font-family: "ProximaNovaSoft-Bold"; }
+
+.jumbotron__description {
+  font-size: 1.125rem;
+  padding: 1rem 0 2.5rem 0; }
+
+.nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  padding: 0;
+  margin: 0; }
+
+.nav__item {
+  list-style: none;
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  text-align: center; }
+
+.nav__link {
+  background: rgba(255, 255, 255, 0.5);
+  font-size: 0.875rem;
+  font-family: "ProximaNovaSoft-Bold";
+  display: block;
+  line-height: 6.25rem;
+  text-transform: uppercase; }
