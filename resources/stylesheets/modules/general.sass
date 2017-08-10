@@ -13,7 +13,7 @@ html, button, input, textarea, label
   line-height: $line-height
 
 body
-  +dark-gradient
+  +light-gradient
   +font-medium
   width: 100%
   min-height: 100vh
@@ -46,3 +46,9 @@ strong
 
 .no-margin
   margin: 0 !important // Temp
+
+img
+  &.is-rounded
+    +circle
+  &.is-responsive
+    // Something

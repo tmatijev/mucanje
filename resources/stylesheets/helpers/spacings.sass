@@ -1,3 +1,13 @@
-$spacing-normal: 1rem
-$spacing-big: 2.5rem
+$spacing-normal: .625rem
+$spacing-large: 1.25rem
+$spacing-big: 1.875rem
 $spacing-huge: 3.75rem
+
+.spacing
+  .spacing-item
+    &:not(:first-child)
+      padding-top: $spacing-normal
+  &.is-big
+    .spacing-item
+      &:not(:first-child)
+        padding-top: $spacing-big

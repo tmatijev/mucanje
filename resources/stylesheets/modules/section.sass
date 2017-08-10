@@ -1,0 +1,36 @@
+// Info blocks
+.info
+  padding: $spacing-huge 0
+  &.is-dark
+    +dark-gradient
+  &.is-light
+    +light-gradient
+
+.info__ul
+  +font-regular
+  list-style: initial
+  padding: $spacing-normal 0 $spacing-large 0
+  margin-left: px-to-rem(30px)
+
+.info__li
+  padding: 0 0 ($spacing-normal / 2) $spacing-normal
+
+// Section
+.section__header
+  position: relative
+
+  &:after
+    content: ''
+    height: 3px
+    width: 50%
+    left: 0
+    bottom: -1px
+    position: absolute
+    background-color: $color-text
+
+.section__title
+  +text-header-big
+  +font-bold
+  padding-bottom: $spacing-normal / 2
+  margin-bottom: $spacing-large
+  border-bottom: 1px solid $color-grey-light
