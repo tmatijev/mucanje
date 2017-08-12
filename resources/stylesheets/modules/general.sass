@@ -13,8 +13,9 @@ html, button, input, textarea, label
   line-height: $line-height
 
 body
-  +light-gradient
+  +dark-gradient
   +font-medium
+  overflow-x: hidden
   width: 100%
   min-height: 100vh
   margin: 0
@@ -40,6 +41,10 @@ strong
 .container
   width: px-to-rem(1200px)
   margin: 0 auto
+
+  +mq($until: tablet)
+    width: 100%
+    margin: 0
 
 .no-padding
   padding: 0 !important // TEMP

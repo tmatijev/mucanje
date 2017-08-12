@@ -1,3 +1,6 @@
+#top-part
+  // overflow: hidden
+
 #header
   position: relative
   &:before,
@@ -15,8 +18,19 @@
   &:after
     left: 100%
 
+  +mq($until: tablet)
+    height: auto
+
+  +mq($until: tablet)
+    +light-gradient
+
 #logo
-  +background-opacity
   display: flex
   align-items: center
   height: $header-height
+
+  +mq($from: tablet)
+    +background-opacity
+
+  +mq($until: tablet)
+    height: $header-height-mobile

@@ -1,6 +1,13 @@
 .logo
   width: px-to-rem(160px)
 
+  +mq($until: tablet)
+    width: px-to-rem(120px)
+    margin: .25rem 0 0 $spacing-large
+
+.logo_icon
+  width: px-to-rem(32px)
+
 .icon
   &.is-blue
     color: $color-blue

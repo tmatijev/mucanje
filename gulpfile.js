@@ -18,10 +18,9 @@ const autoprefixer = require('gulp-autoprefixer')
 // ************************************************ //
 
 // Javascript
-// const jsFiles = [
-//     'resources/js/vendor/right-height.js',
-//     'resources/js/app.js'
-// ];
+const jsFiles = [
+    'resources/javascript/app.js'
+];
 
 const cssFiles = [
   'public/css/fonts.css',
@@ -33,11 +32,11 @@ const cssFiles = [
 // --- Minimized and for showcase
 // ************************************************ //
 
-// gulp.task('scripts', function() {
-//   gulp.src(jsFiles)
-//     .pipe(concat('script.js'))
-//     .pipe(gulp.dest('./public/js/'))
-// });
+gulp.task('scripts', function() {
+  gulp.src(jsFiles)
+    .pipe(concat('script.js'))
+    .pipe(gulp.dest('./public/js/'))
+});
 
 gulp.task('sass', () =>
   sass('resources/stylesheets/styles.sass')
@@ -77,7 +76,7 @@ gulp.task('sass-production', function() {
 
 gulp.task('watch', function() {
   // Watch .js files
-  // gulp.watch(resources + 'js/*.js', ['scripts']);
+  gulp.watch(resources + 'javascript/*.js', ['scripts']);
   // Watch .scss files
   gulp.watch(resources + 'stylesheets/*.sass', ['sass'])
   gulp.watch(resources + 'stylesheets/modules/*.sass', ['sass'])
@@ -90,8 +89,7 @@ gulp.task('watch', function() {
 // ************************************************ //
 
 // Default Task
-// gulp.task('dev', ['scripts', 'sass', 'watch']);
-gulp.task('dev', ['sass', 'watch'])
+gulp.task('dev', ['sass', 'scripts', 'watch'])
 
 // Production Task
 // gulp.task('production', ['scripts-production', 'sass-production']);
