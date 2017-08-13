@@ -3,11 +3,12 @@
   padding: $spacing-normal 0
   color: $color-white
 
-.footer__items
-  display: flex
-  align-items: center
-
-.footer__icon
-  position: relative
-  top: .375rem
-  padding-right: $spacing-big
+.footer
+  +bem-element('items')
+    display: flex
+    align-items: center
+  
+  +bem-element('icon')
+    position: relative
+    top: .375rem
+    padding-right: $spacing-big

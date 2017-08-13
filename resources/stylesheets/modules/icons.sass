@@ -5,77 +5,89 @@
     width: px-to-rem(120px)
     margin: .25rem 0 0 $spacing-large
 
-.logo_icon
-  width: px-to-rem(32px)
+  +bem-element('icon')
+    width: px-to-rem(32px)
 
 .icon
-  &.is-blue
+  // General
+  +bem-element('text')
+    +font-bold
+    padding-top: $spacing-normal
+    font-size: 1.3125rem
+    line-height: 1.4
+    display: block
+    text-align: center
+
+  // Colors
+  +bem-modifier('blue')
     color: $color-blue
 
-  &.is-green
+  +bem-modifier('green')
     color: $color-green
 
-  &.is-yellow
+  +bem-modifier('yellow')
     color: $color-yellow
 
-  &.is-orange
+  +bem-modifier('orange')
     color: $color-orange
 
-  &.is-pink
+  +bem-modifier('pink')
     color: $color-pink
 
-  &.is-purple
+  +bem-modifier('purple')
     color: $color-purple
 
-.icon_is-rounded
-  .icon_shape
-    +circle
-    width: px-to-rem(125px)
-    height: px-to-rem(125px)
+  // Backgrounds
+  +bem-modifier('rounded')
+    +bem-element('shape')
+      +circle
+      width: px-to-rem(125px)
+      height: px-to-rem(125px)
+      display: flex
+      justify-content: center
+
+      +bem-modifier('blue')
+        background-color: $color-blue-light
+        
+      +bem-modifier('green')
+        background-color: $color-green-light
+
+      +bem-modifier('yellow')
+        background-color: $color-yellow-light
+
+      +bem-modifier('orange')
+        background-color: $color-orange-light
+
+      +bem-modifier('purple')
+        background-color: $color-purple-light
+
+      +bem-modifier('pink')
+        background-color: $color-pink-light
+
+  // Types
+  +bem-element('mucanje')
+    width: px-to-rem(55px)
+
+  +bem-element('kriznoRazdoblje')
+    width: px-to-rem(55px)
+
+  +bem-element('samopomoc')
+    width: px-to-rem(55px)
+
+  +bem-element('roditelji')
+    width: px-to-rem(89px)
+
+  +bem-element('price')
+    width: px-to-rem(45px)
+
+  +bem-element('razno')
+    width: px-to-rem(38px)
+
+  +mq($until: wide)
+    padding: $spacing-large 0
+
+  // Alignments
+  +bem-modifier('centered')
     display: flex
-    justify-content: center
-
-    &.is-blue
-      background-color: $color-blue-light
-
-    &.is-green
-      background-color: $color-green-light
-
-    &.is-yellow
-      background-color: $color-yellow-light
-
-    &.is-orange
-      background-color: $color-orange-light
-
-    &.is-purple
-      background-color: $color-purple-light
-
-    &.is-pink
-      background-color: $color-pink-light
-
-.icon_mucanje,
-.icon_kriznoRazdoblje,
-.icon_samopomoc
-  width: px-to-rem(55px)
-
-.icon_roditelji
-  width: px-to-rem(89px)
-
-.icon_price
-  width: px-to-rem(45px)
-
-.icon_razno
-  width: px-to-rem(38px)
-
-.icon_centered
-  display: flex
-  align-items: center
-  flex-direction: column
-
-.icon_text
-  +font-bold
-  padding-top: $spacing-normal
-  font-size: 1.3125rem
-  line-height: 1.4
-  display: block
-  text-align: center
+    align-items: center
+    flex-direction: column

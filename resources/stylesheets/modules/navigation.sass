@@ -2,162 +2,167 @@
   +mq($until: tablet)
     display: none
 
-.nav__ul
-  display: flex
-  align-items: center
-  justify-content: center
-  padding: 0
-  margin: 0
-
-  +mq($until: tablet)
-    flex-direction: column
-    align-items: stretch
-    background-color: $color-green
-    color: $color-white
-
-.nav__item
-  list-style: none
-  flex-grow: 1
-  text-align: center
-
-  +mq($until: tablet)
-    &:not(:first-child)
-      border-top: 1px solid $color-grey-lightest
-
-.nav__link
-  +text-small
-  +font-bold
-  position: relative
-  display: block
-  line-height: $header-height
-  text-transform: uppercase
-
-  +mq($from: tablet)
-    +background-opacity
-
-  +mq($until: tablet)
-    +text-big
-    line-height: 4.0625rem
-
-  &.has-sub
-    &:after
-      width: 0
-      height: 0
-      top: 50%
-      right: 0
-      transform-origin: 25% 50%
-      border: .375rem solid transparent
-      border-width: .3125rem .375rem
-      border-left-color: $color-text
-      display: block
-      text-align: center
-      content: ''
-      position: absolute
-      margin-top: -.3125rem
-      transition: all .2s ease
-      transform: rotate(90deg)
-
-  &.is-active
-    &.has-sub
-      &:after
-        transform: rotate(-90deg)
-
-.nav__list-item__sub
-  display: none
-  background-color: $color-green
-  margin: 0
-  padding: $spacing-large
-  list-style: none
-
-  +mq($from: tablet)
-    position: absolute
-    min-width: 200px
-    z-index: 1
-
-  +mq($until: tablet)
-    // background-color: darken($color-primary, 5%)
-
-.nav__list-item__sub__link
-  +text-small
-  +font-bold
-  text-align: left
-  display: block
-  padding: $spacing-normal 0
-  color: $color-white
-
-  +mq($from: tablet)
-    // color: $color-regular
-    // border-bottom: 1px solid darken($color-light, 8%)
-
-  +mq($until: tablet)
-    color: $color-white
-    opacity: .7
-    padding-left: 30px
-
-  &:hover
-    +mq($from: tablet)
-      // background-color: darken($color-light, 8%)
-      // color: darken($color-regular, 8%)
+  +bem-element('ul')
+    display: flex
+    align-items: center
+    justify-content: center
+    padding: 0
+    margin: 0
 
     +mq($until: tablet)
-      // color: $color-white
-      // background-color: darken($color-primary, 8%)
-      opacity: 1
+      flex-direction: column
+      align-items: stretch
+      background-color: $color-green
+      color: $color-white
+
+  +bem-element('item')
+    list-style: none
+    flex-grow: 1
+    text-align: center
+
+    +mq($until: tablet)
+      &:not(:first-child)
+        border-top: 1px solid $color-grey-lightest
+  
+  +bem-element('link')
+    +text-small
+    +font-bold
+    position: relative
+    display: block
+    line-height: $header-height
+    text-transform: uppercase
+
+    &.has-sub
+      &:after
+        width: 0
+        height: 0
+        top: 50%
+        right: .625rem
+        transform-origin: 25% 50%
+        border: .375rem solid transparent
+        border-width: .3125rem .375rem
+        border-left-color: $color-text
+        display: block
+        text-align: center
+        content: ''
+        position: absolute
+        margin-top: -.3125rem
+        transition: all .2s ease
+        transform: rotate(90deg)
+
+      &.is-active
+        background-color: $color-green
+        color: $color-white
+
+        &.has-sub
+          &:after
+            border-left-color: $color-white
+            transform: rotate(-90deg)
+
+    +mq($from: tablet)
+      +background-opacity
+
+    +mq($until: tablet)
+      +text-big
+      line-height: 4.0625rem
+
+  +bem-element('list-item')
+    +bem-element('sub')
+      display: none
+      background-color: $color-green
+      margin: 0
+      padding: $spacing-large
+      list-style: none
+
+      +mq($from: tablet)
+        position: absolute
+        min-width: 200px
+        z-index: 1
+
+      +mq($until: tablet)
+        padding: $spacing-normal 0
+        background-color: $color-green-subnav
+
+      +bem-element('link')
+        +text-small
+        +font-bold
+        text-align: left
+        display: block
+        padding: $spacing-normal 0
+        color: $color-white
+
+        +mq($from: tablet)
+          // color: $color-regular
+          // border-bottom: 1px solid darken($color-light, 8%)
+
+        +mq($until: tablet)
+          +text-big
+          color: $color-white
+          padding-left: 30px
+
+        &:hover
+          +mq($from: tablet)
+            // color: darken($color-regular, 8%)
+
+          +mq($until: tablet)
+            color: $color-text
+            // opacity: 1
 
 // Mobile menu
-.mobile-menu__wrapper
-  position: absolute
-  display: block
-  width: 28px
-  height: 22px
-  outline: none
-  right: 15px
-  top: 22px
-  pointer-events: auto
+.mobile-menu
+  +bem-element('wrapper')
+    position: absolute
+    display: block
+    width: 28px
+    height: 22px
+    outline: none
+    right: 15px
+    top: 22px
+    pointer-events: auto
 
-  +mq($from: tablet)
-    display: none
+    +mq($from: tablet)
+      display: none
 
-  &.is-active
-    #mobile-nav-btn-1
-      top: 8px
-      transform: rotate(45deg)
+    &.is-active
+      #mobile-nav-btn-1
+        top: 8px
+        transform: rotate(45deg)
 
-    #mobile-nav-btn-2
-      -ms-filter: opacity(0)
-      filter: alpha(opacity=0)
-      -webkit-opacity: 0
-      -moz-opacity: 0
-      -o-opacity: 0
-      opacity: 0
+      #mobile-nav-btn-2
+        -ms-filter: opacity(0)
+        filter: alpha(opacity=0)
+        -webkit-opacity: 0
+        -moz-opacity: 0
+        -o-opacity: 0
+        opacity: 0
 
-    #mobile-nav-btn-3
-      top: 8px
-      transform: rotate(-45deg)
+      #mobile-nav-btn-3
+        top: 8px
+        transform: rotate(-45deg)
 
-.mobile-menu__menu
-  width: 28px
+  +bem-element('menu')
+    width: 28px
 
-.mobile-menu__item
-  position: absolute
-  display: block
-  width: 100%
-  height: 0
-  border-top: 3px solid $color-text
-  margin-bottom: 3px
-  border-radius: 3px
-  
-  &.nav-line-animated
-    transition: transform .5s, opacity .5s, background .5s, top .5s
+  +bem-element('item')
+    position: absolute
+    display: block
+    width: 100%
+    height: 0
+    border-top: 3px solid $color-text
+    margin-bottom: 3px
+    border-radius: 3px
+    
+    &.nav-line-animated
+      transition: transform .5s, opacity .5s, background .5s, top .5s
 
-  &#mobile-nav-btn-1
-    top: 0
+    &#mobile-nav-btn-1
+      top: 0
 
-  &#mobile-nav-btn-2
-    top: 9px
+    &#mobile-nav-btn-2
+      top: 9px
 
-  &#mobile-nav-btn-3
-    top: 18px
+    &#mobile-nav-btn-3
+      top: 18px
 
-  &:last-child
-    margin-bottom: 0
+    &:last-child
+      margin-bottom: 0

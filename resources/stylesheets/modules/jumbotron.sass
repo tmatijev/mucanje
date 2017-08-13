@@ -1,16 +1,16 @@
 .jumbotron
   padding: $spacing-huge 0
 
+  +bem-element('title')
+    +text-header-huge
+    +font-bold
+
+  +bem-element('description')
+    +text-big
+    padding: $spacing-large 0 $spacing-huge 0
+
+  +bem-modifier('white')
+    background-color: $color-white
+
   +mq($until: tablet)
-    padding: $spacing-large
-
-.jumbotron_white
-  background-color: $color-white
-
-.jumbotron__title
-  +text-header-huge
-  +font-bold
-
-.jumbotron__description
-  +text-big
-  padding: $spacing-large 0 $spacing-huge 0
+    padding: $spacing-large  

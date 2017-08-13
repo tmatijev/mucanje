@@ -1,26 +1,39 @@
 .collapsible 
   list-style-type: none 
 
-.collapsible__item  
-  position: relative
+  // Item
+  +bem-element('item')
+    position: relative
 
-  &:not(:first-child)
-    padding-top: $spacing-large
-    margin-top: $spacing-large
-    border-top: 1px solid $color-grey-light
+    &:not(:first-child)
+      padding-top: $spacing-large
+      margin-top: $spacing-large
+      border-top: 1px solid $color-grey-light
 
-.collapsible__label
-  +font-bold
-  +text-big
-  padding-right: $spacing-big + $spacing-normal
-  display: block
-  width: 100%
+  // Label
+  +bem-element('label')
+    +font-bold
+    +text-big
+    padding-right: $spacing-big + $spacing-normal
+    display: block
+    width: 100%
 
-  &:hover
-    cursor: pointer
+    &:hover
+      cursor: pointer
 
-.collapsible__input
-  display: none 
+  // Input
+  +bem-element('input')
+    display: none
+
+  // Pitanje
+  +bem-element('pitanje')
+    padding-bottom: $spacing-large
+    margin-bottom: $spacing-large
+    border-bottom: 1px dashed $color-grey-light
+
+  // Odgovor
+  +bem-element('odgovor')
+    font-style: italic
 
 .collapsible__input ~ .collapsible__content
   +text-small
@@ -54,11 +67,3 @@
 
 .collapsible__input:checked + label:after 
   transform: rotate(90deg)
-
-.collapsible__pitanje
-  padding-bottom: $spacing-large
-  margin-bottom: $spacing-large
-  border-bottom: 1px dashed $color-grey-light
-
-.collapsible__odgovor
-  font-style: italic

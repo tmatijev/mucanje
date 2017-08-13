@@ -1,0 +1,19 @@
+/// Block Element
+@mixin element($element)
+  &__#{$element}
+    @content
+
+/// Block Modifier
+@mixin modifier($modifier)
+  &--#{$modifier}
+    @content
+
+/// @alias element
+@mixin bem-element($element)
+  @include element($element)
+    @content
+
+/// @alias modifier
+@mixin bem-modifier($modifier)
+  @include modifier($modifier)
+    @content

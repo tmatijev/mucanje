@@ -1,21 +1,20 @@
-.user__item
-  display: flex
+.user
+  +bem-element('item')
+    display: flex
 
-.user__image,
-.user__info
-  padding: 0 $spacing-normal * 1.25
+  +bem-element('image')
+    padding: 0 $spacing-normal * 1.25
+    padding-top: $spacing-huge - $spacing-normal
 
-.user__info
-  padding-right: 0
+  +bem-element('info')
+    padding: 0 $spacing-normal * 1.25
+    padding-right: 0
 
-.user__image
-  padding-top: $spacing-huge - $spacing-normal
+  +bem-element('name')
+    +font-bold
+    font-size: 1.3125rem
+    padding-bottom: $spacing-normal
 
-.user__name
-  +font-bold
-  font-size: 1.3125rem
-  padding-bottom: $spacing-normal
-
-.user__description
-  +text-small
-  padding-bottom: $spacing-big + $spacing-normal
+  +bem-element('description')
+    +text-small
+    padding-bottom: $spacing-big + $spacing-normal  
