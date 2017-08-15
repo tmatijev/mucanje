@@ -1,5 +1,14 @@
 .jumbotron
-  padding: $spacing-huge 0
+  .icon
+    +mq($until: wide)
+      padding: $spacing-large 0
+
+  +bem-element('content')
+    padding: $spacing-huge 0
+    position: relative
+
+    +mq($until: tablet)
+      padding: $spacing-large
 
   +bem-element('title')
     +text-header-huge
@@ -7,10 +16,23 @@
 
   +bem-element('description')
     +text-big
-    padding: $spacing-large 0 $spacing-huge 0
+    padding: $spacing-large 0
 
   +bem-modifier('white')
     background-color: $color-white
 
-  +mq($until: tablet)
-    padding: $spacing-large  
+  +bem-modifier('has_icon')
+    +bem-element('icon')
+      position: absolute
+      left: -$spacing-large
+      bottom: -($icon-height / 2)
+
+      +mq($until: tablet)
+        left: 50%
+        margin-left: -($icon-width / 2)
+
+    +bem-element('description')
+      padding: $spacing-large 0 $spacing-huge 0
+
+    .icon
+      padding: 0

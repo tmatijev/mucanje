@@ -41,8 +41,8 @@
   +bem-modifier('rounded')
     +bem-element('shape')
       +circle
-      width: px-to-rem(125px)
-      height: px-to-rem(125px)
+      width: $icon-width
+      height: $icon-height
       display: flex
       justify-content: center
 
@@ -83,8 +83,8 @@
   +bem-element('razno')
     width: px-to-rem(38px)
 
-  +mq($until: wide)
-    padding: $spacing-large 0
+  +bem-element('clock')
+    width: px-to-rem(18px)
 
   // Alignments
   +bem-modifier('centered')

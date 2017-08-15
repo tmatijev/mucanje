@@ -1,0 +1,31 @@
+// WP-Pagenavi from Wordpress
+=pagination-active-state
+  border-color: transparent
+  background-color: $color-green
+  color: $color-white
+
+.wp-pagenavi
+  display: flex
+  justify-content: center
+  align-items: center
+  padding-top: $spacing-huge
+  margin-top: $spacing-large
+  border-top: 1px solid $color-grey-light
+
+  > *
+    padding: 0 $spacing-normal
+    min-width: $pagination-dimension
+    text-align: center
+    height: $pagination-dimension
+    line-height: $pagination-dimension
+    border: 1px solid $color-grey-light
+    margin: 0 .125rem
+
+  .page,
+  .nextpostslink,
+  .last
+    &:hover
+      +pagination-active-state
+
+  .current
+    +pagination-active-state

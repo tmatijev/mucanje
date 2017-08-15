@@ -4,11 +4,12 @@ $spacing-big: 1.875rem
 $spacing-huge: 3.75rem
 
 .spacing
-  .spacing-item
+  +bem-element('item')
     &:not(:first-child)
       padding-top: $spacing-normal
-  &.is-big
-    .spacing-item
+
+  +bem-modifier('big')
+    +bem-element('item')
       &:not(:first-child)
         padding-top: $spacing-big
 

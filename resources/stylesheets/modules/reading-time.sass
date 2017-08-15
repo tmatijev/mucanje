@@ -1,0 +1,23 @@
+.reading_time
+  display: flex
+  align-items: center
+
+  +bem-element('icon')
+    padding-right: $spacing-normal / 2
+    .icon
+      margin-top: .4375rem
+
+  +bem-element('time')
+    +text-small
+
+  +bem-element('bullet')
+    +text-small
+    padding: 0 $spacing-normal / 2
+
+  +bem-element('author')
+    +text-small
+
+  +bem-element('category')
+    +text-small
+    +font-bold
+    text-decoration: underline

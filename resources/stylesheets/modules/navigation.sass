@@ -32,7 +32,13 @@
     line-height: $header-height
     text-transform: uppercase
 
-    &.has-sub
+    +mq($from: tablet)
+      +background-opacity
+
+    &:hover
+      background: none
+
+    +bem-modifier('has-sub')
       &:after
         width: 0
         height: 0
@@ -40,31 +46,35 @@
         right: .625rem
         transform-origin: 25% 50%
         border: .375rem solid transparent
-        border-width: .3125rem .375rem
+        border-width: $nav-arrow-height $nav-arrow-width
         border-left-color: $color-text
         display: block
         text-align: center
         content: ''
         position: absolute
-        margin-top: -.3125rem
+        margin-top: -$nav-arrow-height
         transition: all .2s ease
         transform: rotate(90deg)
 
-      &.is-active
+      +bem-modifier('active')
         background-color: $color-green
         color: $color-white
 
-        &.has-sub
-          &:after
-            border-left-color: $color-white
-            transform: rotate(-90deg)
+        &:after
+          border-left-color: $color-white
+          transform: rotate(-90deg)
 
-    +mq($from: tablet)
-      +background-opacity
+        &:hover
+          background-color: $color-green
+
+    +bem-modifier('active')
+      background: none
 
     +mq($until: tablet)
       +text-big
-      line-height: 4.0625rem
+      line-height: $nav-sub-item-height
+      text-align: left
+      padding-left: $spacing-large
 
   +bem-element('list-item')
     +bem-element('sub')
@@ -76,7 +86,7 @@
 
       +mq($from: tablet)
         position: absolute
-        min-width: 200px
+        min-width: $nav-sub-item-min-width
         z-index: 1
 
       +mq($until: tablet)
@@ -98,34 +108,47 @@
         +mq($until: tablet)
           +text-big
           color: $color-white
-          padding-left: 30px
+          padding-left: $spacing-big
 
         &:hover
-          +mq($from: tablet)
-            // color: darken($color-regular, 8%)
+          color: $color-text
 
-          +mq($until: tablet)
-            color: $color-text
-            // opacity: 1
+// Frontpage Navigation
+// body.frontpage .nav
+//   +bem-element('ul')
+//     +mq($until: tablet)
+//       background-color: $color-green
+//       color: $color-white
+
+// Rest Navigation
 
 // Mobile menu
+#mobile-nav-btn-1
+  top: 0
+
+#mobile-nav-btn-2
+  top: $mobile-menu-middle-arrow-position
+
+#mobile-nav-btn-3
+  top: $mobile-menu-last-arrow-position
+
 .mobile-menu
   +bem-element('wrapper')
     position: absolute
     display: block
-    width: 28px
-    height: 22px
+    width: $mobile-menu-width
+    height: $mobile-menu-height
     outline: none
-    right: 15px
-    top: 22px
+    right: .9375rem
+    top: 1.375rem
     pointer-events: auto
 
     +mq($from: tablet)
       display: none
 
-    &.is-active
+    +bem-modifier('active')
       #mobile-nav-btn-1
-        top: 8px
+        top: .5rem
         transform: rotate(45deg)
 
       #mobile-nav-btn-2
@@ -137,32 +160,23 @@
         opacity: 0
 
       #mobile-nav-btn-3
-        top: 8px
+        top: .5rem
         transform: rotate(-45deg)
 
   +bem-element('menu')
-    width: 28px
+    width: $mobile-menu-width
 
   +bem-element('item')
     position: absolute
     display: block
     width: 100%
     height: 0
-    border-top: 3px solid $color-text
-    margin-bottom: 3px
-    border-radius: 3px
+    border-top: .1875rem solid $color-text
+    margin-bottom: px-to-rem(3px)
+    border-radius: px-to-rem(3px)
     
     &.nav-line-animated
       transition: transform .5s, opacity .5s, background .5s, top .5s
-
-    &#mobile-nav-btn-1
-      top: 0
-
-    &#mobile-nav-btn-2
-      top: 9px
-
-    &#mobile-nav-btn-3
-      top: 18px
 
     &:last-child
       margin-bottom: 0

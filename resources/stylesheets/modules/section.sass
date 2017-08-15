@@ -17,6 +17,15 @@
   +bem-modifier('light')
     +light-gradient
 
+  +bem-modifier('short')
+    +short-gradient
+
+  +bem-modifier('small')
+    padding: $spacing-large
+
+  +mq($until: tablet)
+    +spacing-mobile-vertical
+
 // Section
 .section
   +bem-element('header')
@@ -37,3 +46,8 @@
     padding-bottom: $spacing-normal / 2
     margin-bottom: $spacing-large
     border-bottom: 1px solid $color-grey-light
+
+    +bem-modifier('big')
+      +text-header-bigger
+      padding-bottom: $spacing-large
+      margin-bottom: $spacing-huge

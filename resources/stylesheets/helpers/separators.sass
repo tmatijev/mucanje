@@ -1,0 +1,9 @@
+.separator
+  +bem-modifier('until_tablet')
+    +mq($until: tablet)
+      +bem-modifier('big')
+        padding: $spacing-large 0
+  +bem-modifier('until_desktop')
+    +mq($until: desktop)
+      +bem-modifier('big')
+        padding: $spacing-large 0

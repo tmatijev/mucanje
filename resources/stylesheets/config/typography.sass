@@ -3,6 +3,14 @@ $font-bold: 'ProximaNovaSoft-Bold'
 $font-medium: 'ProximaNovaSoft-Medium'
 $font-semibold: 'ProximaNovaSoft-Semibold'
 
+$text-small: px-to-rem(14px)
+$text-normal: px-to-rem(16px)
+$text-big: px-to-rem(18px)
+$text-bigger: px-to-rem(21px)
+$text-header-big: px-to-rem(28px)
+$text-header-bigger: px-to-rem(33px)
+$text-header-huge: px-to-rem(38px)
+
 // Fonts
 =font-regular
   font-family: $font-regular
@@ -18,31 +26,43 @@ $font-semibold: 'ProximaNovaSoft-Semibold'
 
 // Text
 =text-small
-  font-size: px-to-rem(14px)
+  font-size: $text-small
 
 =text-normal
-  font-size: px-to-rem(16px)
+  font-size: $text-normal
 
 =text-big
-  font-size: px-to-rem(18px)
+  font-size: $text-big
 
-=text-header-huge
-  font-size: px-to-rem(38px)
+=text-bigger
+  font-size: $text-bigger
 
 =text-header-big
-  font-size: px-to-rem(28px)
+  font-size: $text-header-big
+
+=text-header-bigger
+  font-size: $text-header-bigger
+
+=text-header-huge
+  font-size: $text-header-huge
 
 .text-small
-  font-size: px-to-rem(14px)
+  font-size: $text-small
 
 .text-normal
-  font-size: px-to-rem(16px)
+  font-size: $text-normal
 
 .text-big
-  font-size: px-to-rem(18px)
+  font-size: $text-big
 
-.text-header-huge
-  font-size: px-to-rem(38px)
+.text-bigger
+  font-size: $text-bigger
 
 .text-header-big
-  font-size: px-to-rem(28px)
+  font-size: $text-header-big
+
+.text-header-bigger
+  font-size: $text-header-bigger
+
+.text-header-huge
+  font-size: $text-header-huge

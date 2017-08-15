@@ -10,21 +10,38 @@
   text-transform: uppercase
   color: $color-white
   padding: 1rem 0
-  border-radius: px-to-rem(6px)
-  width: px-to-rem(262px)
+  border-radius: $button-radius
+  width: $button-width
   line-height: 1
 
   // Blue
   +bem-modifier('blue')
     background-color: $color-blue
 
+    &:hover
+      background-color: darken($color-blue, 5%)
+
   // Orange
   +bem-modifier('orange')
     background-color: $color-orange
 
+    &:hover
+      background-color: darken($color-orange, 5%)
+
   // Green
   +bem-modifier('green')
     background-color: $color-green
+
+    &:hover
+      background-color: darken($color-green, 5%)
+
+  // Full width
+  +bem-modifier('full_width')
+    display: block
+    width: 100%
+
+  &:hover
+    cursor: pointer
 
   &:focus,
   &.focus

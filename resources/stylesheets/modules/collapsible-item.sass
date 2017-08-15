@@ -3,8 +3,6 @@
 
   // Item
   +bem-element('item')
-    position: relative
-
     &:not(:first-child)
       padding-top: $spacing-large
       margin-top: $spacing-large
@@ -17,6 +15,10 @@
     padding-right: $spacing-big + $spacing-normal
     display: block
     width: 100%
+    position: relative
+
+    +bem-modifier('big')
+      +text-bigger
 
     &:hover
       cursor: pointer
@@ -33,16 +35,19 @@
 
   // Odgovor
   +bem-element('odgovor')
+    +text-small
     font-style: italic
 
+    +bem-modifier('big')
+      +text-normal
+
 .collapsible__input ~ .collapsible__content
-  +text-small
+  +transition-normal
   +font-regular
   max-height: 0
   max-width: 0
   opacity: 0
   overflow: hidden
-  transition: all .2s ease
 
 .collapsible__input:checked ~ .collapsible__content
   max-height: 100%
@@ -51,9 +56,13 @@
   padding: $spacing-large 0
 
 .collapsible__input + label:after
+  +transition-normal
+  +transform-rotate-quarter
+  top: 50%
+  right: 0
   transform-origin: 25% 50%
-  border: .375rem solid transparent
-  border-width: .375rem .625rem
+  border: $collapsible-arrow-height solid transparent
+  border-width: $collapsible-arrow-height $collapsible-arrow-width
   border-left-color: $color-text
   width: 0
   height: 0
@@ -61,9 +70,7 @@
   text-align: center
   content: ''
   position: absolute
-  right: 0
-  margin-top: -.75rem
-  transition: all .2s ease
+  margin-top: -$collapsible-arrow-height
 
 .collapsible__input:checked + label:after 
-  transform: rotate(90deg)
+  +transform-rotate-quarter-negative

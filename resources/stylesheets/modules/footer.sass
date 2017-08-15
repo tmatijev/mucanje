@@ -3,6 +3,9 @@
   padding: $spacing-normal 0
   color: $color-white
 
+  +mq($until: tablet)
+    +spacing-mobile-vertical
+
 .footer
   +bem-element('items')
     display: flex
