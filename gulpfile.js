@@ -7,10 +7,7 @@ const dest = 'public/'
 // Include plugins
 const concat = require('gulp-concat')
 const uglify = require('gulp-uglify')
-const rename = require('gulp-rename')
 const sass = require('gulp-ruby-sass')
-const imagemin = require('gulp-imagemin')
-const cache = require('gulp-cache')
 const autoprefixer = require('gulp-autoprefixer')
 
 // ************************************************ //

@@ -4,13 +4,9 @@
     "flexboxgrid": "^6.3.1",
     "gulp": "latest",
     "gulp-autoprefixer": "^4.0.0",
-    "gulp-cache": "latest",
     "gulp-concat": "latest",
-    "gulp-imagemin": "latest",
-    "gulp-rename": "latest",
     "gulp-ruby-sass": "latest",
     "gulp-uglify": "latest",
-    "postcss-import": "^10.0.0",
     "sass-mq": "^3.3.2"
   }
 }
