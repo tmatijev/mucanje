@@ -46,8 +46,8 @@ gulp.task('sass', () =>
     .pipe(gulp.dest('public/css'))
     .on('end', () => {
       gulp.src(cssFiles)
-        .pipe(concat('stylesheets.css'))
-        .pipe(gulp.dest('public/css/'))
+        .pipe(concat('style.css'))
+        .pipe(gulp.dest('../'))
     })
 )
 

@@ -17,7 +17,7 @@
   
   mucanje = {
     opt: '',
-
+    
     init: function(params){
         // this.opt = Object.assign({}, defaults, params)
         mucanje.helperDebounce()
@@ -103,7 +103,7 @@
         e.preventDefault()
 
         that.helperToggleElement(document.querySelectorAll(defaults.header.nav)[0])
-        this.classList.toggle('is-active')
+        this.classList.toggle('mobile-menu__wrapper--active')
       })
     },
 
@@ -112,7 +112,7 @@
     },
 
     resetMobileMenu: function () {
-      document.querySelectorAll(defaults.header.mobileNavButton)[0].classList.remove('is-active')
+      document.querySelectorAll(defaults.header.mobileNavButton)[0].classList.remove('mobile-menu__wrapper--active')
       document.querySelectorAll(defaults.header.nav)[0].style.display = 'block'
     },
 
@@ -152,7 +152,7 @@
       el.addEventListener('click', function (e) {
         e.preventDefault()
 
-        this.classList.toggle('is-active')
+        this.classList.toggle('nav__link--has-sub--active')
         let closest = that.helperClosestElement(this, defaults.header.nav)
         that.helperToggleElement(closest.querySelectorAll('.js-sub-nav')[0])
       })

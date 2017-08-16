@@ -17,7 +17,7 @@
   
   mucanje = {
     opt: '',
-
+    
     init: function(params){
         // this.opt = Object.assign({}, defaults, params)
         mucanje.helperDebounce()
