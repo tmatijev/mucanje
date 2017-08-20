@@ -1,18 +1,14 @@
 .collapsible 
   list-style-type: none 
 
-  // Item
-  +bem-element('item')
-    &:not(:first-child)
-      padding-top: $spacing-large
-      margin-top: $spacing-large
-      border-top: 1px solid $color-grey-light
-
   // Label
   +bem-element('label')
     +font-bold
     +text-big
     padding-right: $spacing-big + $spacing-normal
+    padding-bottom: $spacing-large
+    margin-bottom: $spacing-large
+    border-bottom: 1px solid $color-grey-light
     display: block
     width: 100%
     position: relative
@@ -58,7 +54,7 @@
 .collapsible__input + label:after
   +transition-normal
   +transform-rotate-quarter
-  top: 50%
+  top: .5rem
   right: 0
   transform-origin: 25% 50%
   border: $collapsible-arrow-height solid transparent
@@ -70,7 +66,6 @@
   text-align: center
   content: ''
   position: absolute
-  margin-top: -$collapsible-arrow-height
 
 .collapsible__input:checked + label:after 
   +transform-rotate-quarter-negative

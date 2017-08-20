@@ -7,11 +7,24 @@
     +spacing-mobile-vertical
 
 .footer
+  display: flex
+
   +bem-element('items')
     display: flex
     align-items: center
   
   +bem-element('icon')
     position: relative
-    top: .375rem
+    top: .125rem
     padding-right: $spacing-big
+
+  +bem-element('social')
+    margin-left: auto
+    display: flex
+    align-items: center
+
+    +bem-element('link')
+      margin: 0 $spacing-normal
+
+    +bem-element('icon')
+      color: $color-white

@@ -4,6 +4,7 @@
     +font-bold
     +text-header-big
     margin-bottom: $spacing-large
+    display: block
 
   +bem-element('body')
     p
@@ -19,3 +20,21 @@
       padding-top: $spacing-large
       margin-top: $spacing-large
       border-top: 1px solid $color-grey-light
+
+    +bem-element('body')
+      p
+        &:not(:last-child)
+          margin-bottom: $spacing-large
+
+      ol
+        list-style-type: decimal
+        margin-left: $spacing-large + $spacing-normal
+        > li
+          &:not(:last-child)
+            margin-bottom: $spacing-large
+
+      ul
+        list-style-type: disc
+        margin-left: $spacing-large + $spacing-normal
+        > li
+          margin-bottom: $spacing-large

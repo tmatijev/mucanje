@@ -4,7 +4,7 @@
       padding: $spacing-large 0
 
   +bem-element('content')
-    padding: $spacing-huge 0
+    padding: $spacing-huge 0 ($spacing-huge + $spacing-large) 0
     position: relative
 
     +mq($until: tablet)
@@ -17,6 +17,13 @@
   +bem-element('description')
     +text-big
     padding: $spacing-large 0
+
+    > p
+      &:not(:last-child)
+        margin-bottom: $spacing-large
+
+  +bem-element('icons')
+    margin-top: $spacing-large + $spacing-normal
 
   +bem-modifier('white')
     background-color: $color-white

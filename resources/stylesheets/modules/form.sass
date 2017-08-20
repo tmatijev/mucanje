@@ -2,6 +2,21 @@
   +bem-element('section')
     padding: $spacing-normal 0
 
+    .wpcf7-not-valid-tip
+      +text-small
+      display: block
+      margin: .5rem 0 0 .5rem
+
+    .wpcf7-form-control-wrap
+      margin-top: $spacing-normal
+      display: block
+
+      > input
+        width: 100%
+        padding: $spacing-normal $spacing-large
+        border: none
+        outline: none
+
   +bem-element('element')
     width: 100%
     padding: $spacing-large
@@ -10,3 +25,13 @@
 
     &::placeholder
       opacity: .5
+
+// Contact Form 7 Specific CSS
+.wpcf7
+  .screen-reader-response
+    display: none
+
+.wpcf7-validation-errors
+  +font-bold
+  display: block
+  margin-top: $spacing-large

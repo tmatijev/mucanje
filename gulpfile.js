@@ -32,7 +32,7 @@ const cssFiles = [
 gulp.task('scripts', function() {
   gulp.src(jsFiles)
     .pipe(concat('script.js'))
-    .pipe(gulp.dest('./public/js/'))
+    .pipe(gulp.dest('../js/'))
 });
 
 gulp.task('sass', () =>
