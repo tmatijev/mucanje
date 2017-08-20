@@ -1,7 +1,81 @@
 .jumbotron
   .icon
+    +transition-normal
     +mq($until: wide)
       padding: $spacing-large 0
+
+    +bem-element('hover')
+      +text-smallest
+      +font-bold
+      line-height: 1
+      position: relative
+      margin-top: $spacing-normal
+      text-transform: uppercase
+      transition: opacity 0.5s, transform 0.5s
+      transform: scale3d(0.8,0.8,1) translate3d(0,-10px,0)
+      opacity: 0
+      padding: .4rem $spacing-normal
+      display: block
+      width: 100%
+      text-align: center
+
+      &:after,
+      &:before
+        content: ""
+        display: block
+        position: absolute
+        width: 100%
+        height: 1px
+        background: $color-lightest
+
+      &:after
+        bottom: 0
+
+      &:before
+        top: -3px
+
+  +bem-element('link')
+    display: block
+    overflow: hidden
+
+    &:hover
+      .icon__hover
+        transform: translate3d(0,0,0)
+        opacity: 1
+
+        &:before,
+        &:after
+          transform: scale3d(1,1,1)
+
+      .icon--rounded__shape--blue
+        background-color: $color-blue
+        .icon__transition
+          color: $color-blue-light
+
+      .icon--rounded__shape--green
+        background-color: $color-green
+        .icon__transition
+          color: $color-green-light
+
+      .icon--rounded__shape--yellow
+        background-color: $color-yellow
+        .icon__transition
+          color: $color-yellow-light
+
+      .icon--rounded__shape--orange
+        background-color: $color-orange
+        .icon__transition
+          color: $color-orange-light
+
+      .icon--rounded__shape--pink
+        background-color: $color-pink
+        .icon__transition
+          color: $color-pink-light
+
+      .icon--rounded__shape--purple
+        background-color: $color-purple
+        .icon__transition
+          color: $color-purple-light
 
   +bem-element('content')
     padding: $spacing-huge 0 ($spacing-huge + $spacing-large) 0
@@ -21,6 +95,10 @@
     > p
       &:not(:last-child)
         margin-bottom: $spacing-large
+
+    a
+      +font-bold
+      text-decoration: underline
 
   +bem-element('icons')
     margin-top: $spacing-large + $spacing-normal

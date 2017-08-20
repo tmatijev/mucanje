@@ -7,3 +7,34 @@
 =link-regular
   +font-bold
   text-decoration: underline
+
+=text-format-ul
+  ol
+    list-style-type: decimal
+    margin-left: $spacing-large + $spacing-normal
+    > li
+      &:not(:last-child)
+        margin-bottom: $spacing-large
+
+=text-format-ol
+  ol
+    list-style-type: decimal
+    margin-left: $spacing-large + $spacing-normal
+    > li
+      &:not(:last-child)
+        margin-bottom: $spacing-large
+
+=text-format-p
+  p
+    &:not(:last-child)
+      margin-bottom: $spacing-large + $spacing-normal
+
+=text-format-header-big
+  +font-bold
+  +text-header-big
+  margin-bottom: $spacing-large
+
+=text-format-header-normal
+  +font-bold
+  +text-bigger
+  margin-bottom: $spacing-large
