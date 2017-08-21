@@ -163,6 +163,19 @@ img.is-rounded {
 .pitanja_text {
   text-transform: uppercase; }
 
+.youtube-video {
+  overflow: hidden;
+  padding-bottom: 56.25%;
+  height: 0;
+  margin-bottom: 1.25rem;
+  position: relative; }
+  .youtube-video iframe {
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute; }
+
 .info {
   padding: 3.75rem 0; }
   .info__ul {
@@ -203,6 +216,7 @@ img.is-rounded {
     background-color: #333; }
 .section__title {
   font-size: 1.75rem;
+  line-height: 1.35;
   font-family: "ProximaNovaSoft-Bold";
   padding-bottom: 0.3125rem;
   margin-bottom: 1.25rem;
@@ -215,23 +229,32 @@ img.is-rounded {
 .article__title {
   font-family: "ProximaNovaSoft-Bold";
   font-size: 1.75rem;
+  line-height: 1.35;
   margin-bottom: 1.25rem;
   display: block; }
+.article__body ul {
+  list-style-type: disc;
+  margin-left: 1.875rem;
+  margin-bottom: 1.875rem; }
+  .article__body ul > li:not(:last-child) {
+    margin-bottom: 0.625rem; }
 .article__body ol {
   list-style-type: decimal;
-  margin-left: 1.875rem; }
+  margin-left: 1.875rem;
+  margin-bottom: 1.875rem; }
   .article__body ol > li:not(:last-child) {
-    margin-bottom: 1.25rem; }
+    margin-bottom: 0.625rem; }
 .article__body p:not(:last-child) {
   margin-bottom: 1.875rem; }
 .article__body h2 {
   font-family: "ProximaNovaSoft-Bold";
   font-size: 1.75rem;
-  margin-bottom: 1.25rem; }
+  line-height: 1.35;
+  margin: 1.25rem 0; }
 .article__body h3 {
   font-family: "ProximaNovaSoft-Bold";
   font-size: 1.3125rem;
-  margin-bottom: 1.25rem; }
+  margin: 1.25rem 0; }
 .article__body a {
   font-family: "ProximaNovaSoft-Bold";
   text-decoration: underline; }
@@ -247,14 +270,16 @@ img.is-rounded {
   border-top: 1px solid #ccc; }
 .article--list__body p:not(:last-child) {
   margin-bottom: 1.875rem; }
-.article--list__body ol {
-  list-style-type: decimal;
-  margin-left: 1.875rem; }
-  .article--list__body ol > li:not(:last-child) {
+.article--list__body ul {
+  list-style-type: disc;
+  margin-left: 1.875rem;
+  margin-bottom: 1.875rem; }
+  .article--list__body ul > li:not(:last-child) {
     margin-bottom: 1.25rem; }
 .article--list__body ol {
   list-style-type: decimal;
-  margin-left: 1.875rem; }
+  margin-left: 1.875rem;
+  margin-bottom: 1.875rem; }
   .article--list__body ol > li:not(:last-child) {
     margin-bottom: 1.25rem; }
 
@@ -639,6 +664,7 @@ img.is-rounded {
       padding: 1.25rem; } }
 .jumbotron__title {
   font-size: 2.375rem;
+  line-height: 1.25;
   font-family: "ProximaNovaSoft-Bold"; }
 .jumbotron__description {
   font-size: 1.125rem;
