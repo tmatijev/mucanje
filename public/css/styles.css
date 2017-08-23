@@ -247,10 +247,6 @@ img.is-rounded {
   text-decoration: underline; }
 .article__body em {
   font-style: italic; }
-@media (max-width: 47.99em) {
-  .article {
-    padding-left: 1.25rem;
-    padding-right: 1.25rem; } }
 .article--list:not(:first-child) {
   padding-top: 1.875rem;
   margin-top: 1.875rem;
@@ -382,10 +378,6 @@ img.is-rounded {
   background-color: #60bfae;
   padding: 0.625rem 0;
   color: #fff; }
-  @media (max-width: 47.99em) {
-    #footer {
-      padding-left: 1.25rem;
-      padding-right: 1.25rem; } }
 
 .footer {
   display: -webkit-box;
@@ -672,6 +664,8 @@ img.is-rounded {
   margin-top: 1.875rem; }
 .jumbotron--white {
   background-color: #fff; }
+.jumbotron--has_icon__content {
+  padding-bottom: 5rem; }
 .jumbotron--has_icon__icon {
   position: absolute;
   left: -1.25rem;
