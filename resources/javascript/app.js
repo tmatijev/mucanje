@@ -148,7 +148,7 @@
       let that = this
       let el = document.querySelectorAll(defaults.header.navSubButton)[0]
 
-      el.removeEventListener('click', false)
+      // el.removeEventListener('click', false)
       el.addEventListener('click', function (e) {
         e.preventDefault()
 
