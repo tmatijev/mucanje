@@ -1,54 +1,29 @@
 .article
+  // Article title
   +bem-element('title')
     +font-bold
     +text-header-big
     margin-bottom: $spacing-large
     display: block
 
+  // Article body
   +bem-element('body')
     +text-format-ul-small
     +text-format-ol-small
     +text-format-p
+    +article-body-wordpress
     position: relative
 
-    h2
-      +text-format-header-big
-
-      &:first-of-type
-        margin-top: 0
-
-    h3
-      +text-format-header-normal
-  
-    a
-      +link-regular
-
-    em
-      font-style: italic
-
-  // List
+  // Article List
   +bem-modifier('list')
     &:not(:first-child)
       padding-top: $spacing-large + $spacing-normal
       margin-top: $spacing-large + $spacing-normal
       border-top: 1px solid $color-grey-light
 
+    // Article list body
     +bem-element('body')
       +text-format-p
       +text-format-ul
       +text-format-ol
-
-      h2
-        +text-format-header-big
-
-        &:first-of-type
-          margin-top: 0
-
-      h3
-        +text-format-header-normal
-    
-      a
-        +link-regular
-
-      em
-        font-style: italic
+      +article-body-wordpress

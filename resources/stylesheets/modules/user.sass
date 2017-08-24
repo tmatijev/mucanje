@@ -1,11 +1,15 @@
 .user
+  // User item
   +bem-element('item')
     display: flex
 
+  // User image - not currently in use
+  // but will be in the future
   +bem-element('image')
     padding: 0 $spacing-normal * 1.25
     padding-top: $spacing-huge - $spacing-normal
 
+  // User info
   +bem-element('info')
     padding: 0 $spacing-normal * 1.25
     padding-right: 0
@@ -13,11 +17,13 @@
     +mq($until: tablet)
       padding: 0
 
+  // User name
   +bem-element('name')
     +font-bold
     +text-bigger
     padding-bottom: $spacing-normal
 
+  // User description
   +bem-element('description')
     +text-small
     padding-bottom: $spacing-big + $spacing-normal  
