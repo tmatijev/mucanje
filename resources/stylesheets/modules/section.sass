@@ -2,6 +2,9 @@
 .info
   padding: $spacing-huge 0
 
+  +mq($until: tablet)
+    padding: $spacing-large * 2 0
+
   +bem-element('ul')
     +font-regular
     list-style: initial
@@ -22,6 +25,9 @@
 
   +bem-modifier('small')
     padding: $spacing-large
+
+  +bem-modifier('no_space')
+    padding: 0
 
 // Section
 .section

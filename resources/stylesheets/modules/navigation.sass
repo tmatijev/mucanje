@@ -1,3 +1,11 @@
+#top-part
+  > .container
+    +mq($until: desktop)
+      width: 100%
+
+  +mq($until: tablet)
+    overflow: hidden
+
 .nav
   +mq($until: tablet)
     display: none
@@ -121,15 +129,6 @@
         +bem-modifier('active')
           color: $color-text
 
-// Frontpage Navigation
-// body.frontpage .nav
-//   +bem-element('ul')
-//     +mq($until: tablet)
-//       background-color: $color-green
-//       color: $color-white
-
-// Rest Navigation
-
 // Mobile menu
 #mobile-nav-btn-1
   top: 0
@@ -145,10 +144,10 @@
     position: absolute
     display: block
     width: $mobile-menu-width
-    height: $mobile-menu-height
+    height: $header-height-mobile
     outline: none
     right: .9375rem
-    top: 1.5rem
+    top: 0
     pointer-events: auto
     z-index: 99
 
@@ -174,6 +173,8 @@
 
   +bem-element('menu')
     width: $mobile-menu-width
+    position: relative
+    margin-top: 1.5rem
 
   +bem-element('item')
     position: absolute

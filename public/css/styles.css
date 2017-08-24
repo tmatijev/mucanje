@@ -128,7 +128,7 @@ strong {
 .content {
   background-color: #fff;
   padding: 7.5rem 0; }
-  @media (max-width: 47.99em) {
+  @media (max-width: 61.99em) {
     .content {
       padding: 3.75rem 0; } }
 
@@ -169,6 +169,9 @@ img.is-rounded {
 
 .info {
   padding: 3.75rem 0; }
+  @media (max-width: 47.99em) {
+    .info {
+      padding: 2.5rem 0; } }
   .info__ul {
     font-family: "ProximaNovaSoft-Regular";
     list-style: initial;
@@ -190,6 +193,8 @@ img.is-rounded {
     background: linear-gradient(to right, #f8f4fa, #fbf4f9); }
   .info--small {
     padding: 1.25rem; }
+  .info--no_space {
+    padding: 0; }
 
 .section__header {
   position: relative; }
@@ -219,34 +224,38 @@ img.is-rounded {
   line-height: 1.35;
   margin-bottom: 1.25rem;
   display: block; }
-.article__body ul {
-  list-style-type: disc;
-  margin-left: 1.875rem;
-  margin-bottom: 1.875rem; }
-  .article__body ul > li:not(:last-child) {
-    margin-bottom: 0.625rem; }
-.article__body ol {
-  list-style-type: decimal;
-  margin-left: 1.875rem;
-  margin-bottom: 1.875rem; }
-  .article__body ol > li:not(:last-child) {
-    margin-bottom: 0.625rem; }
-.article__body p:not(:last-child) {
-  margin-bottom: 1.875rem; }
-.article__body h2 {
-  font-family: "ProximaNovaSoft-Bold";
-  font-size: 1.75rem;
-  line-height: 1.35;
-  margin: 1.25rem 0; }
-.article__body h3 {
-  font-family: "ProximaNovaSoft-Bold";
-  font-size: 1.3125rem;
-  margin: 1.25rem 0; }
-.article__body a {
-  font-family: "ProximaNovaSoft-Bold";
-  text-decoration: underline; }
-.article__body em {
-  font-style: italic; }
+.article__body {
+  position: relative; }
+  .article__body ul {
+    list-style-type: disc;
+    margin-left: 1.875rem;
+    margin-bottom: 1.875rem; }
+    .article__body ul > li:not(:last-child) {
+      margin-bottom: 0.625rem; }
+  .article__body ol {
+    list-style-type: decimal;
+    margin-left: 1.875rem;
+    margin-bottom: 1.875rem; }
+    .article__body ol > li:not(:last-child) {
+      margin-bottom: 0.625rem; }
+  .article__body p:not(:last-child) {
+    margin-bottom: 1.875rem; }
+  .article__body h2 {
+    font-family: "ProximaNovaSoft-Bold";
+    font-size: 1.75rem;
+    line-height: 1.35;
+    margin: 1.25rem 0; }
+    .article__body h2:first-of-type {
+      margin-top: 0; }
+  .article__body h3 {
+    font-family: "ProximaNovaSoft-Bold";
+    font-size: 1.3125rem;
+    margin: 1.25rem 0; }
+  .article__body a {
+    font-family: "ProximaNovaSoft-Bold";
+    text-decoration: underline; }
+  .article__body em {
+    font-style: italic; }
 .article--list:not(:first-child) {
   padding-top: 1.875rem;
   margin-top: 1.875rem;
@@ -265,6 +274,22 @@ img.is-rounded {
   margin-bottom: 1.875rem; }
   .article--list__body ol > li:not(:last-child) {
     margin-bottom: 1.25rem; }
+.article--list__body h2 {
+  font-family: "ProximaNovaSoft-Bold";
+  font-size: 1.75rem;
+  line-height: 1.35;
+  margin: 1.25rem 0; }
+  .article--list__body h2:first-of-type {
+    margin-top: 0; }
+.article--list__body h3 {
+  font-family: "ProximaNovaSoft-Bold";
+  font-size: 1.3125rem;
+  margin: 1.25rem 0; }
+.article--list__body a {
+  font-family: "ProximaNovaSoft-Bold";
+  text-decoration: underline; }
+.article--list__body em {
+  font-style: italic; }
 
 .button {
   font-family: "ProximaNovaSoft-Bold";
@@ -421,6 +446,9 @@ img.is-rounded {
       padding: 0.625rem 1.25rem;
       border: none;
       outline: none; }
+      .form__section .wpcf7-form-control-wrap > input.wpcf7-not-valid {
+        -webkit-box-shadow: inset 0px 0px 5px 0px #f29f8d;
+        box-shadow: inset 0px 0px 5px 0px #f29f8d; }
 .form__element {
   width: 100%;
   padding: 1.25rem;
@@ -432,6 +460,9 @@ img.is-rounded {
     opacity: 0.5; }
   .form__element::placeholder {
     opacity: 0.5; }
+  .form__element.wpcf7-not-valid {
+    -webkit-box-shadow: inset 0px 0px 5px 0px #f29f8d;
+    box-shadow: inset 0px 0px 5px 0px #f29f8d; }
 
 .wpcf7 .screen-reader-response {
   display: none; }
@@ -441,8 +472,9 @@ img.is-rounded {
   display: block;
   margin-top: 1.25rem; }
 
-@media (max-width: 47.99em) {
+@media (max-width: 74.99em) {
   #top-part > .container {
+    width: 100%;
     padding: 0; } }
 
 #header {
@@ -454,6 +486,9 @@ img.is-rounded {
     top: 0;
     width: 100%;
     height: 6.25rem; }
+    @media (max-width: 74.99em) {
+      #header:before, #header:after {
+        display: none; } }
   #header:before {
     left: -100%; }
   #header:after {
@@ -481,6 +516,9 @@ img.is-rounded {
   @media (max-width: 47.99em) {
     #logo {
       height: 4.375rem; } }
+  @media (min-width: 48em) and (max-width: 74.99em) {
+    #logo {
+      padding-left: 1.25rem; } }
 
 .logo {
   margin-top: 0.375rem; }
@@ -570,6 +608,60 @@ img.is-rounded {
   -ms-flex-direction: column;
   flex-direction: column; }
 
+.social {
+  position: absolute;
+  left: -4.0625rem;
+  top: 0.5rem; }
+  .social__link {
+    display: block;
+    width: 2.8125rem;
+    height: 2.8125rem;
+    overflow: hidden; }
+    .social__link:last-child {
+      margin-top: 0.625rem; }
+      @media (max-width: 61.99em) {
+        .social__link:last-child {
+          margin: 0 0 0 0.625rem; } }
+    @media (max-width: 61.99em) {
+      .social__link {
+        display: inline-block; } }
+  .social__wrapper {
+    display: block;
+    width: 2.8125rem;
+    height: 2.8125rem; }
+    .social__wrapper--fb {
+      background-color: #3b5998; }
+    .social__wrapper--tw {
+      background-color: #1fa1f3; }
+  .social__icon {
+    color: #fff;
+    width: 2.8125rem;
+    height: 2.8125rem; }
+    .social__icon--fb {
+      width: 1.75rem;
+      margin-left: 0.4375rem; }
+    .social__icon--tw {
+      width: 1.75rem;
+      margin-left: 0.5rem; }
+  .social__small_screen {
+    font-family: "ProximaNovaSoft-Bold";
+    margin-right: 0.625rem; }
+    @media (min-width: 62em) {
+      .social__small_screen {
+        display: none; } }
+  @media (max-width: 61.99em) {
+    .social {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      position: relative;
+      left: auto;
+      top: auto;
+      margin-bottom: 3.75rem; } }
+
 .jumbotron .icon {
   -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease; }
@@ -605,12 +697,20 @@ img.is-rounded {
       bottom: 0; }
     .jumbotron .icon__hover:before {
       top: -3px; }
+    @media (max-width: 47.99em) {
+      .jumbotron .icon__hover {
+        display: none; } }
 .jumbotron__categories {
   margin-top: 3.75rem; }
+  @media (max-width: 74.99em) {
+    .jumbotron__categories {
+      margin-top: 1.25rem; } }
+  @media (max-width: 47.99em) {
+    .jumbotron__categories {
+      margin-top: 0; } }
 .jumbotron__link {
   display: block;
-  overflow: hidden;
-  min-height: 17.5rem; }
+  overflow: hidden; }
   .jumbotron__link:hover .icon__hover {
     -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
@@ -642,12 +742,18 @@ img.is-rounded {
     background-color: #cd9ec4; }
     .jumbotron__link:hover .icon--rounded__shape--purple .icon__transition {
       color: #f8f1f6; }
+  @media (max-width: 61.99em) {
+    .jumbotron__link {
+      min-height: 17.5rem; } }
+  @media (max-width: 47.99em) {
+    .jumbotron__link {
+      min-height: 14.6875rem; } }
 .jumbotron__content {
   padding: 3.75rem 0 5rem 0;
   position: relative; }
   @media (max-width: 47.99em) {
     .jumbotron__content {
-      padding: 1.25rem; } }
+      padding: 1.875rem 0.625rem 1.875rem 0.625rem; } }
 .jumbotron__title {
   font-size: 2.375rem;
   line-height: 1.25;
@@ -678,6 +784,13 @@ img.is-rounded {
   padding: 1.25rem 0 3.75rem 0; }
 .jumbotron--has_icon .icon {
   padding: 0; }
+
+@media (max-width: 61.99em) {
+  #top-part > .container {
+    width: 100%; } }
+@media (max-width: 47.99em) {
+  #top-part {
+    overflow: hidden; } }
 
 @media (max-width: 47.99em) {
   .nav {
@@ -812,10 +925,10 @@ img.is-rounded {
   position: absolute;
   display: block;
   width: 1.75rem;
-  height: 1.375rem;
+  height: 4.375rem;
   outline: none;
   right: 0.9375rem;
-  top: 1.5rem;
+  top: 0;
   pointer-events: auto;
   z-index: 99; }
   @media (min-width: 48em) {
@@ -837,7 +950,9 @@ img.is-rounded {
     -webkit-transform: rotate(-45deg);
     transform: rotate(-45deg); }
 .mobile-menu__menu {
-  width: 1.75rem; }
+  width: 1.75rem;
+  position: relative;
+  margin-top: 1.5rem; }
 .mobile-menu__item {
   position: absolute;
   display: block;

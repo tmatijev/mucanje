@@ -17,6 +17,9 @@
         border: none
         outline: none
 
+        &.wpcf7-not-valid
+          box-shadow: inset 0px 0px 5px 0px $color-orange
+
   +bem-element('element')
     width: 100%
     padding: $spacing-large
@@ -25,6 +28,9 @@
 
     &::placeholder
       opacity: .5
+
+    &.wpcf7-not-valid
+      box-shadow: inset 0px 0px 5px 0px $color-orange
 
 // Contact Form 7 Specific CSS
 .wpcf7

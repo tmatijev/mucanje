@@ -104,3 +104,63 @@
     display: flex
     align-items: center
     flex-direction: column
+
+// Social share
+.social
+  position: absolute
+  left: -4.0625rem
+  top: .5rem
+
+  +bem-element('link')
+    display: block
+    width: 2.8125rem
+    height: 2.8125rem
+    overflow: hidden
+
+    &:last-child
+      margin-top: .625rem
+
+      +mq($until: desktop)
+        margin: 0 0 0 .625rem
+
+    +mq($until: desktop)
+      display: inline-block
+
+  +bem-element('wrapper')
+    display: block
+    width: 2.8125rem
+    height: 2.8125rem
+
+    +bem-modifier('fb')
+      background-color: $color-facebook
+
+    +bem-modifier('tw')
+      background-color: $color-twitter
+
+  +bem-element('icon')
+    color: $color-white
+    width: 2.8125rem
+    height: 2.8125rem
+
+    +bem-modifier('fb')
+      width: 1.75rem
+      margin-left: .4375rem
+
+    +bem-modifier('tw')
+      width: 1.75rem
+      margin-left: .5rem
+
+  +bem-element('small_screen')
+    +font-bold
+    margin-right: $spacing-normal
+
+    +mq($from: desktop)
+      display: none
+
+  +mq($until: desktop)
+    display: flex
+    align-items: center
+    position: relative
+    left: auto
+    top: auto
+    margin-bottom: 3.75rem

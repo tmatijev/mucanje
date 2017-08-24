@@ -1,5 +1,4 @@
 .article
-  // Default
   +bem-element('title')
     +font-bold
     +text-header-big
@@ -10,9 +9,13 @@
     +text-format-ul-small
     +text-format-ol-small
     +text-format-p
+    position: relative
 
     h2
       +text-format-header-big
+
+      &:first-of-type
+        margin-top: 0
 
     h3
       +text-format-header-normal
@@ -34,3 +37,18 @@
       +text-format-p
       +text-format-ul
       +text-format-ol
+
+      h2
+        +text-format-header-big
+
+        &:first-of-type
+          margin-top: 0
+
+      h3
+        +text-format-header-normal
+    
+      a
+        +link-regular
+
+      em
+        font-style: italic

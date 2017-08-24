@@ -34,13 +34,21 @@
       &:before
         top: -3px
 
+      +mq($until: tablet)
+        display: none
+
   +bem-element('categories')
     margin-top: $spacing-huge
+
+    +mq($until: wide)
+      margin-top: $spacing-large
+
+    +mq($until: tablet)
+      margin-top: 0
 
   +bem-element('link')
     display: block
     overflow: hidden
-    min-height: 17.5rem
 
     &:hover
       .icon__hover
@@ -81,12 +89,21 @@
         .icon__transition
           color: $color-purple-light
 
+    +mq($until: desktop)
+      min-height: 17.5rem
+
+    +mq($until: tablet)
+      min-height: 14.6875rem
+
   +bem-element('content')
     padding: $spacing-huge 0 ($spacing-huge + $spacing-large) 0
     position: relative
 
+    // +mq($until: wide)
+    //   padding-bottom: 0
+
     +mq($until: tablet)
-      padding: $spacing-large
+      padding: ($spacing-large + $spacing-normal) $spacing-normal ($spacing-large + $spacing-normal) $spacing-normal
 
   +bem-element('title')
     +text-header-huge
