@@ -1,9 +1,16 @@
 .not_found
   margin-top: $spacing-huge * 2
 
+  +mq($until: tablet)
+    margin-top: $spacing-huge
+
   +bem-element('text')
     +text-bigger
     margin-top: $spacing-huge
 
-    > a
+    a
       +link-regular
+
+  .icon__404
+    +mq($until: tablet)
+      width: 100%
