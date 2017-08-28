@@ -654,12 +654,23 @@ img.is-rounded {
   .collapsible__input {
     display: none; }
   .collapsible__pitanje {
+    font-size: 0.875rem;
     padding-bottom: 1.25rem;
     margin-bottom: 1.25rem;
     border-bottom: 1px dashed #ccc; }
+    .collapsible__pitanje p {
+      padding-bottom: 0.625rem; }
+      .collapsible__pitanje p:last-child {
+        padding-bottom: 0; }
+    .collapsible__pitanje--big {
+      font-size: 1rem; }
   .collapsible__odgovor {
     font-size: 0.875rem;
     font-style: italic; }
+    .collapsible__odgovor p {
+      padding-bottom: 0.625rem; }
+      .collapsible__odgovor p:last-child {
+        padding-bottom: 0; }
     .collapsible__odgovor--big {
       font-size: 1rem; }
 
@@ -676,7 +687,7 @@ img.is-rounded {
   max-height: 100%;
   max-width: 100%;
   opacity: 1;
-  padding: 1.25rem 0; }
+  padding-bottom: 1.25rem; }
 
 .collapsible__input + label:after {
   -webkit-transition: all 0.2s ease;
