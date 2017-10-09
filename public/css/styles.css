@@ -883,7 +883,7 @@ img.is-rounded {
         border-width: 0.4375rem 0.625rem;
         margin-top: -0.4375rem; } }
   .nav__link--has-sub--active {
-    background-color: #60bfae;
+    background-color: #60bfae !important;
     color: #fff; }
     .nav__link--has-sub--active:after {
       border-left-color: #fff;

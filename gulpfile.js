@@ -9,6 +9,8 @@ const concat = require('gulp-concat')
 const uglify = require('gulp-uglify')
 const sass = require('gulp-ruby-sass')
 const autoprefixer = require('gulp-autoprefixer')
+const cleanCSS = require('gulp-clean-css')
+const rev = require('gulp-rev')
 
 // ************************************************ //
 // --- JavaScript files
@@ -51,6 +53,14 @@ gulp.task('sass', () =>
         .pipe(gulp.dest('public/css/'))
     })
 )
+
+gulp.task('minify-css', () => {
+  return gulp.src('public/css/style.css')
+    .pipe(cleanCSS({compatibility: 'ie8'}))
+    .pipe(concat('styles.css'))
+    .pipe(rev())
+    .pipe(gulp.dest('../'))
+});
 
 gulp.task('scripts-prod', function() {
   gulp.src(jsFiles)

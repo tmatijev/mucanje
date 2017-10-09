@@ -7,6 +7,8 @@
     "gulp-concat": "latest",
     "gulp-ruby-sass": "latest",
     "gulp-uglify": "latest",
-    "sass-mq": "^3.3.2"
+    "sass-mq": "^3.3.2",
+    "gulp-clean-css": "latest",
+    "gulp-rev": "latest"
   }
 }
